@@ -12,10 +12,6 @@ ap.add_argument("-u", "--username", required=True,
 	help="insta's username")
 ap.add_argument("-p", "--password", required=True,
 	help="insta's password")
-ap.add_argument("-w", "--followwho", required=True,
-	help="The username to follow from")
-ap.add_argument("-ps", "--posttofollow", required=True,
-	help="The post to follow likers from")
 ap.add_argument("-mh", "--maxperhour", default=160,
 	help="Max per hour", type=int)
 ap.add_argument("-md", "--maxperday", default=600,
@@ -24,7 +20,6 @@ args = vars(ap.parse_args())
 
 
 username, password = args['username'], args['password']
-instaUsername, instaPostId = args['followwho'], args['posttofollow']
 maxPerHour, maxPerDay = args['maxperhour'], args['maxperday']
 count = 0
 
